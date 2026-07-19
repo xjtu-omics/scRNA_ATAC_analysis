@@ -1,0 +1,15 @@
+analysis_layer,metric,metric_label,profile_stat,profile_stat_label,n_cell_classes,pearson,spearman,median_abs_rank_delta,evidence_tier
+SNV effect profile,perturb_euclidean_distance,Perturbation Euclidean distance,mean_score,Mean,9,0.8288900976834661,0.9,0.125,primary
+SNV effect profile,perturb_euclidean_distance,Perturbation Euclidean distance,median_score,Median,9,0.5462201648656456,0.8333333333333334,0.125,primary
+SNV effect profile,perturb_euclidean_distance,Perturbation Euclidean distance,p90_score,P90,9,0.8479279576955682,0.85,0.125,secondary
+SNV effect profile,perturb_euclidean_distance,Perturbation Euclidean distance,p95_score,P95,9,0.9346027655372507,0.8666666666666667,0,secondary
+SNV effect profile,perturb_euclidean_distance,Perturbation Euclidean distance,top50_mean_score,Top 50 mean,9,0.6390118824499865,0.8333333333333334,0.125,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,mean_score,Mean,9,0.8123125833630206,0.8,0.125,primary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,median_score,Median,9,0.6596899380488541,0.8,0.125,primary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,p25_score,P25,9,0.514738602236764,0.6833333333333333,0.25,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,p75_score,P75,9,0.8948766120242517,0.8666666666666667,0.125,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,p90_score,P90,9,0.95341315904088475,0.8333333333333334,0.125,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,p95_score,P95,9,0.9762028432731604,0.8333333333333334,0.125,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,p99_score,P99,9,0.9841998109320796,0.8333333333333334,0.125,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,positive_fraction,Positive fraction,9,NA,NA,0,secondary
+Cell perturbation profile,perturbation_score_euclidean,Euclidean score,top_n_mean_score,Top 200 mean,9,0.9436310436743904,0.7666666666666667,0.125,secondary

@@ -1,0 +1,6 @@
+metric,metric_label,profile_stat,profile_stat_label,n_cell_classes,pearson,spearman
+perturb_euclidean_distance,Perturbation Euclidean distance,mean_score,Mean,9,0.8288900976834661,0.9
+perturb_euclidean_distance,Perturbation Euclidean distance,median_score,Median,9,0.5462201648656456,0.8333333333333334
+perturb_euclidean_distance,Perturbation Euclidean distance,p90_score,P90,9,0.8479279576955682,0.85
+perturb_euclidean_distance,Perturbation Euclidean distance,p95_score,P95,9,0.9346027655372509,0.8666666666666667
+perturb_euclidean_distance,Perturbation Euclidean distance,top50_mean_score,Top 50 mean,9,0.6390118824499865,0.8333333333333334

@@ -1,0 +1,31 @@
+platform,cell_class,retained,n_cells,n_source_clusters,source_clusters
+3-end RNA-seq,Fibroblast,TRUE,3296,1,5
+3-end RNA-seq,Keratinocyte,TRUE,10341,4,13;6;7;8
+3-end RNA-seq,Endothelial,TRUE,4930,2,0;23
+3-end RNA-seq,Perivascular smooth muscle,TRUE,2041,2,11;21
+3-end RNA-seq,T cell,TRUE,6675,2,1;10
+3-end RNA-seq,B cell,TRUE,253,1,20
+3-end RNA-seq,Plasma cell,TRUE,1155,1,14
+3-end RNA-seq,Myeloid/dendritic,TRUE,3691,3,22;26;4
+3-end RNA-seq,NK cell,TRUE,323,1,19
+3-end RNA-seq,Mast cell,TRUE,1115,1,15
+3-end RNA-seq,Other immune,TRUE,325,1,18
+3-end RNA-seq,Melanocyte,TRUE,62,1,24
+3-end RNA-seq,Adnexal epithelial,TRUE,2186,2,12;16
+3-end RNA-seq,Schwann,TRUE,57,1,25
+3-end RNA-seq,Sebocyte,TRUE,2607,1,9
+3-end RNA-seq,Low information,FALSE,8332,3,17;2;3
+Full-length RNA-seq,Fibroblast,TRUE,30940,4,0;10;16;3
+Full-length RNA-seq,Keratinocyte,TRUE,11210,3,11;5;7
+Full-length RNA-seq,Endothelial,TRUE,14746,2,1;8
+Full-length RNA-seq,Perivascular smooth muscle,TRUE,8650,1,4
+Full-length RNA-seq,T cell,TRUE,10819,1,2
+Full-length RNA-seq,B cell,TRUE,1264,1,12
+Full-length RNA-seq,Plasma cell,TRUE,1212,1,13
+Full-length RNA-seq,Myeloid/dendritic,TRUE,6031,1,6
+Full-length RNA-seq,Mast cell,TRUE,860,1,14
+Full-length RNA-seq,Other immune,TRUE,108,1,19
+Full-length RNA-seq,Melanocyte,TRUE,205,1,18
+Full-length RNA-seq,Adnexal epithelial,TRUE,738,1,15
+Full-length RNA-seq,Schwann,TRUE,441,1,17
+Full-length RNA-seq,Low information,FALSE,2619,1,9

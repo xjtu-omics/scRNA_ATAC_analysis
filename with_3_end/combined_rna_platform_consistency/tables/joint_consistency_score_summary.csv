@@ -1,0 +1,4 @@
+analysis_layer,primary_metric,n_cell_classes,mean_profile_pearson,mean_profile_spearman,median_profile_pearson,median_profile_spearman,mean_of_mean_and_median_spearman,interpretation
+SNV effect profile,perturb_euclidean_distance,9,0.8288900976834661,0.9,0.5462201648656456,0.8333333333333334,0.8666666666666667,SNV-level Perturbation Euclidean distance profile correlations are summarized across marker-harmonized coarse cell classes.
+Cell perturbation profile,perturbation_score_euclidean,9,0.8123125833630206,0.8,0.6596899380488541,0.8,0.8,Cell-level Euclidean score profile correlations and distribution differences are summarized after marker-based cell-class harmonization.
+Joint descriptive summary,perturb_euclidean_distance + perturbation_score_euclidean,9,0.8206013405232433,0.8500000000000001,0.6029550514572499,0.8166666666666667,0.8333333333333334,"Agreement can differ by layer and statistic; this is descriptive integration, not a formal meta-analysis."

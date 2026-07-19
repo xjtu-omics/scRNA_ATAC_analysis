@@ -1,0 +1,37 @@
+cell_class,analysis_layer,profile_stat,platform,score,rank
+Fibroblast,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,4.354660584564103,5
+Fibroblast,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,3.3412543160486363,7
+Keratinocyte,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,5.913932000654118,3
+Keratinocyte,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,5.929508346579279,4
+Endothelial,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,1.9514669325266345,8
+Endothelial,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,3.3817236238124457,6
+Perivascular smooth muscle,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,2.3494418727881357,7
+Perivascular smooth muscle,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,3.156858875015564,8
+T cell,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,1.3147101034777775,9
+T cell,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,2.309137306298666,9
+Plasma cell,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,47.20947411558621,1
+Plasma cell,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,16.98518758094737,1
+Myeloid/dendritic,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,2.6661781493318015,6
+Myeloid/dendritic,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,4.239067728527005,5
+Mast cell,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,4.445468785097088,4
+Mast cell,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,7.60444324,3
+Adnexal epithelial,SNV Perturbation Euclidean distance mean,mean_score,3-end RNA-seq,11.896741128597702,2
+Adnexal epithelial,SNV Perturbation Euclidean distance mean,mean_score,Full-length RNA-seq,14.99775319711111,2
+Fibroblast,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,1.5383485228066698,5
+Fibroblast,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.329234421819174,8
+Keratinocyte,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,1.7717936625305026,3
+Keratinocyte,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.5492895859410805,5
+Endothelial,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,1.0193212434727228,8
+Endothelial,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.375226087213482,6
+Perivascular smooth muscle,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,1.1544721315948163,7
+Perivascular smooth muscle,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.3301068216948209,7
+T cell,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,0.7754953537700364,9
+T cell,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.0968755547246336,9
+Plasma cell,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,3.7118125624402256,1
+Plasma cell,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,2.4123716997799445,2
+Myeloid/dendritic,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,1.2583832761346625,6
+Myeloid/dendritic,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.553959260289017,4
+Mast cell,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,1.5894210762095564,4
+Mast cell,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,1.9961073405081444,3
+Adnexal epithelial,Cell perturbation Euclidean score mean,mean_score,3-end RNA-seq,2.225788181440591,2
+Adnexal epithelial,Cell perturbation Euclidean score mean,mean_score,Full-length RNA-seq,2.56756102028856,1

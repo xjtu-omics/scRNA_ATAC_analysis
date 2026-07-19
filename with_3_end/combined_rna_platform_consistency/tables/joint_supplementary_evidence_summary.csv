@@ -1,0 +1,9 @@
+evidence_group,statistic,value,note
+Cell perturbation distribution distance,median_ks_statistic,0.603465651419293,Distribution-level differences are supplementary because cells are unpaired across platforms.
+Cell perturbation distribution distance,max_ks_statistic,0.725301130451652,Distribution-level differences are supplementary because cells are unpaired across platforms.
+Cell perturbation distribution distance,median_standardized_mean_difference,0.560355843902991,Distribution-level differences are supplementary because cells are unpaired across platforms.
+Largest cell distribution differences,Plasma cell_ks_statistic,0.725301130451652,Median delta full-minus-3' = -1.411
+Largest cell distribution differences,Endothelial_ks_statistic,0.664289326833615,Median delta full-minus-3' = 0.374
+Largest cell distribution differences,Myeloid/dendritic_ks_statistic,0.656330908917866,Median delta full-minus-3' = 0.319
+Largest cell distribution differences,T cell_ks_statistic,0.619014627189236,Median delta full-minus-3' = 0.357
+Largest cell distribution differences,Mast cell_ks_statistic,0.603465651419293,Median delta full-minus-3' = 0.698

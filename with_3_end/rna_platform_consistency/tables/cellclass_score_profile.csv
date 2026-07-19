@@ -1,0 +1,23 @@
+platform,cell_class,metric,n_snv_rows,n_unique_snvs,mean_score,median_score,p90_score,p95_score,top50_mean_score,metric_label
+3-end RNA-seq,Fibroblast,perturb_euclidean_distance,741,741,4.354660584564103,3.832692385,7.350331783,8.6848659519999991,10.29657661486,Perturbation Euclidean distance
+Full-length RNA-seq,Fibroblast,perturb_euclidean_distance,2750,2750,3.3412543160486363,2.7689232825000003,6.4323156355,8.151762365199989,14.83393400249,Perturbation Euclidean distance
+3-end RNA-seq,Keratinocyte,perturb_euclidean_distance,2291,2291,5.913932000654118,4.987765312,10.5376606,12.657292365,22.66133004546,Perturbation Euclidean distance
+Full-length RNA-seq,Keratinocyte,perturb_euclidean_distance,925,925,5.929508346579279,4.426367283,12.265542222,15.922271535999997,23.074602928,Perturbation Euclidean distance
+3-end RNA-seq,Endothelial,perturb_euclidean_distance,826,826,1.9514669325266345,1.751609206,3.289829731,3.68333393375,4.39278529164,Perturbation Euclidean distance
+Full-length RNA-seq,Endothelial,perturb_euclidean_distance,1149,1149,3.3817236238124457,2.741714954,6.8782430652,8.43352870959998,11.40779127174,Perturbation Euclidean distance
+3-end RNA-seq,Perivascular smooth muscle,perturb_euclidean_distance,177,177,2.3494418727881357,2.133141518,4.2737323762,5.3509222983999996,4.24919108626,Perturbation Euclidean distance
+Full-length RNA-seq,Perivascular smooth muscle,perturb_euclidean_distance,514,514,3.156858875015564,2.6244248150000002,6.106789016699999,7.435487628149996,8.13921135912,Perturbation Euclidean distance
+3-end RNA-seq,T cell,perturb_euclidean_distance,90,90,1.3147101034777777,1.136321664,1.91306833,2.231021327249999,1.70628255848,Perturbation Euclidean distance
+Full-length RNA-seq,T cell,perturb_euclidean_distance,750,750,2.3091373062986666,2.0461564064999997,3.9529658081000014,4.6522198918,5.41629681586,Perturbation Euclidean distance
+Full-length RNA-seq,B cell,perturb_euclidean_distance,15,15,1.7529388466,1.346910834,3.6096624375999995,4.0813979628000006,1.7529388466,Perturbation Euclidean distance
+3-end RNA-seq,Plasma cell,perturb_euclidean_distance,58,58,47.209474115586204,36.342830655,96.80201567700003,117.53534122,52.9750585128,Perturbation Euclidean distance
+Full-length RNA-seq,Plasma cell,perturb_euclidean_distance,19,19,16.98518758094737,9.316495895,35.27181854199999,50.445932772999946,16.98518758094737,Perturbation Euclidean distance
+3-end RNA-seq,Myeloid/dendritic,perturb_euclidean_distance,544,544,2.6661781493318015,2.4030411244999996,4.094017839599999,4.768535328150001,5.26561669344,Perturbation Euclidean distance
+Full-length RNA-seq,Myeloid/dendritic,perturb_euclidean_distance,611,611,4.239067728527005,3.616464615,8.109064102,9.0856227875,9.80958772632,Perturbation Euclidean distance
+3-end RNA-seq,NK cell,perturb_euclidean_distance,1,1,3.860604763,3.860604763,3.860604763,3.860604763,3.860604763,Perturbation Euclidean distance
+3-end RNA-seq,Mast cell,perturb_euclidean_distance,103,103,4.445468785097088,3.358118296,8.012472248,11.873776433999991,6.61299186706,Perturbation Euclidean distance
+Full-length RNA-seq,Mast cell,perturb_euclidean_distance,5,5,7.60444324,8.619446754,12.434491348,12.527965164,7.60444324,Perturbation Euclidean distance
+3-end RNA-seq,Other immune,perturb_euclidean_distance,1,1,3.768442869,3.768442869,3.768442869,3.768442869,3.768442869,Perturbation Euclidean distance
+3-end RNA-seq,Adnexal epithelial,perturb_euclidean_distance,261,261,11.896741128597702,4.919228077,28.10726547,46.25682449,41.52384008437,Perturbation Euclidean distance
+Full-length RNA-seq,Adnexal epithelial,perturb_euclidean_distance,18,18,14.99775319711111,10.101305963,32.43977508500001,40.92166729399999,14.99775319711111,Perturbation Euclidean distance
+3-end RNA-seq,Sebocyte,perturb_euclidean_distance,157,157,7.11220733200637,4.928097248,15.089535521999998,18.56905822799999,13.68349617042,Perturbation Euclidean distance
