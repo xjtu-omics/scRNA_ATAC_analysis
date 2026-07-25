@@ -69,6 +69,65 @@ Integrates the two orthogonal analyses above into a joint consistency assessment
 - **Does**: builds joint cell-class consistency profiles, joint correlation and consistency-score summaries, rank-concordance across evidence layers, and a supplementary-evidence summary.
 - **Outputs** (`combined_rna_platform_consistency/`): tables including `joint_cellclass_consistency_profile.csv`, `joint_profile_correlation_summary.csv`, `joint_consistency_score_summary.csv`, `joint_cellclass_rank_concordance.csv`, `joint_supplementary_evidence_summary.csv`, plus overview scatter, rank, and rank-heatmap figures.
 
+## 🧬 AlphaGenome Analysis (`analysis_alphagenome/`)
+
+This workflow evaluates SNV effects in skin-related AlphaGenome tracks, summarizes the breadth of predicted RNA-seq and ATAC-seq effects, and combines those results with VESPA perturbation scores and functional annotations for publication-oriented visualization.
+
+### `score_skin_snv_alphagenome.py`
+
+Runs AlphaGenome variant scoring for an SNV table and exports both the complete score table and a subset matching skin-related metadata. It supports RNA-seq, ATAC-seq, and other AlphaGenome scorers, batch processing, single-SNV retry after a failed batch, and optional summary figures. Real scoring requires the `alphagenome` package and an API key supplied through `--api-key` or `ALPHAGENOME_API_KEY`.
+
+### `summarize_strict_skin_alphagenome_stats.py`
+
+Applies a stricter skin-only filter to the RNA-seq and ATAC-seq score tables, then calculates per-SNV absolute-score summaries. The main outputs are:
+
+- `alphagenome_strict_skin_boxplot_stats.csv`
+- `alphagenome_rnaseq_strict_skin_scores.csv`
+- `alphagenome_atac_strict_skin_scores.csv`
+- RNA-seq and ATAC-seq metadata summary tables
+
+### `plot_alphagenome_results.py`
+
+Creates Nature-style SVG and PNG figures from `alphagenome_strict_skin_boxplot_stats.csv`, showing the within-SNV RNA score range and interquartile range. Both the complete figure and a square panel-A version are exported.
+
+### `export_alphagenome_snv_strengths.py`
+
+Extracts a compact three-column table from a merged VESPA–AlphaGenome summary, retaining `input_snv` together with the selected AlphaGenome RNA and ATAC strength columns.
+
+### `plot_top_snv_circular.R`
+
+Ranks SNVs by the configured VESPA perturbation score and draws a Nature-style circular summary with VESPA scores, AlphaGenome RNA/ATAC boxplot rings, and functional annotation tracks. Before running it, generate the corresponding results with AlphaGenome, snpEff, RegulationSpotter, VEP, and MutationTaster, then replace the `/path/to/.../file` placeholders in the configuration block. The script writes a top-SNV summary CSV, circular PNG/PDF figures, and a separate summary-panel PNG/PDF. It requires the R packages `circlize`, `dplyr`, and `readr`.
+
+Recommended order:
+
+```bash
+# Score RNA-seq and ATAC-seq effects separately.
+python analysis_alphagenome/score_skin_snv_alphagenome.py \
+  --snv-list /path/to/input/snvs.csv \
+  --output-all /path/to/alphagenome/rnaseq_all_scores.csv \
+  --output-skin /path/to/alphagenome/rnaseq_skin_scores.csv \
+  --scorer rna_seq
+
+python analysis_alphagenome/score_skin_snv_alphagenome.py \
+  --snv-list /path/to/input/snvs.csv \
+  --output-all /path/to/alphagenome/atac_all_scores.csv \
+  --output-skin /path/to/alphagenome/atac_skin_scores.csv \
+  --scorer atac
+
+# Build strict-skin summary statistics used by both plotting scripts.
+python analysis_alphagenome/summarize_strict_skin_alphagenome_stats.py \
+  --rnaseq-all /path/to/alphagenome/rnaseq_all_scores.csv \
+  --atac-all /path/to/alphagenome/atac_all_scores.csv \
+  --output-dir /path/to/alphagenome/strict_skin
+
+python analysis_alphagenome/plot_alphagenome_results.py \
+  --stats-csv /path/to/alphagenome/strict_skin/alphagenome_strict_skin_boxplot_stats.csv \
+  --output-dir /path/to/alphagenome/figures
+
+# Edit the configuration paths at the top of the R script before running it.
+Rscript analysis_alphagenome/plot_top_snv_circular.R
+```
+
 ## 🧰 Requirements
 
 **Python** (scientific environment): `numpy`, `pandas`, `matplotlib`, `scipy`, `scikit-learn`, `anndata`, `scanpy`, `h5py`, and `snapatac2` (scATAC workflow).
