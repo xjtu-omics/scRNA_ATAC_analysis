@@ -6,13 +6,19 @@ Benchmark scripts for comparing single-cell RNA-seq and single-cell ATAC-seq tec
 
 ```
 scRNA_ATAC_benchmark/
-├── with_other_platform/          # Python cross-platform benchmark scripts
+├── benchmark_with_other_platform/ # Python cross-platform benchmark scripts
 │   ├── benchmark_scRNA_metrics_compute.py
 │   └── benchmark_scATAC_metrics_compute.py
-└── with_3_end/                   # R 3-end vs. full-length consistency scripts
-    ├── compare_snv_effect_rna_platforms.R
-    ├── compare_cell_perturbation_rna_platforms.R
-    └── combine_rna_platform_consistency.R
+├── analysis_3_end/                # R 3-end vs. full-length consistency scripts
+│   ├── compare_snv_effect_rna_platforms.R
+│   ├── compare_cell_perturbation_rna_platforms.R
+│   └── combine_rna_platform_consistency.R
+└── analysis_alphagenome/          # AlphaGenome SNV-effect analysis and plotting
+    ├── score_skin_snv_alphagenome.py
+    ├── summarize_strict_skin_alphagenome_stats.py
+    ├── plot_alphagenome_results.py
+    ├── export_alphagenome_snv_strengths.py
+    └── plot_top_snv_circular.R
 ```
 
 ## 🐍 Python Scripts (`with_other_platform/`)
