@@ -30,7 +30,7 @@ env_or_default <- function(name, default) {
 input_dir <- if (length(args) >= 1) {
   args[[1]]
 } else {
-  "I:/极空间/文献插图/最终版/补充材料/snv_effect_by_cell_type"
+  "/path/to/snv_effect_by_cell_type"
 }
 
 output_dir <- if (length(args) >= 2) {
@@ -165,24 +165,6 @@ check_file_exists <- function(path) {
 }
 
 walk(c(three_end_score_path, full_length_score_path, three_end_marker_path, full_length_marker_path), check_file_exists)
-
-obsolete_plot_files <- list.files(
-  plot_dir,
-  pattern = "^04_.*\\.(png|pdf)$",
-  full.names = TRUE
-)
-if (length(obsolete_plot_files) > 0) {
-  unlink(obsolete_plot_files, force = TRUE)
-}
-
-obsolete_table_files <- list.files(
-  table_dir,
-  pattern = "^(04_.*|cellclass_mean_score_scatter.*)\\.csv$",
-  full.names = TRUE
-)
-if (length(obsolete_table_files) > 0) {
-  unlink(obsolete_table_files, force = TRUE)
-}
 
 normalize_gene <- function(x) {
   x %>%

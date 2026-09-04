@@ -142,15 +142,15 @@ Rscript analysis_alphagenome/plot_top_snv_circular.R
 
 ## ⚙️ Before Running
 
-The Python scripts contain hard-coded working directories and dataset paths, for example:
+The Python scripts use placeholder working directories and dataset paths, for example:
 
 ```python
-os.chdir("/groups/adv2105_gp/yichen/Yi/multi/scRNA-out")
+os.chdir("/path/to/scRNA-out")
 ```
 
 Review and update these paths first, and check dataset-specific configuration such as `DATASETS`, `FRAG`, `PEAKS`, `TENXH5`, `GENOME`, `OUTDIR`, and filtering thresholds. Note the scripts are notebook-derived and execute top-level code on import.
 
-The R scripts default their input/output directories to paths under `I:/极空间/...`; pass explicit arguments (or set the corresponding environment variables) to point at your own data.
+The R scripts use placeholder input/output directories under `/path/to/...`; pass explicit arguments (or set the corresponding environment variables) to point at your own data.
 
 ## ▶️ Running the Workflows
 

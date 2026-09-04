@@ -30,7 +30,7 @@ except Exception:
 
 
 import os
-os.chdir("/groups/adv2105_gp/yichen/Yi/multi/scRNA-out")
+os.chdir("/path/to/scRNA-out")
 
 
 # 
@@ -131,16 +131,16 @@ class DS:
     prefer_counts: bool = True
 
 DATASETS = [
-    DS("SPLiT-seq",      "SPLiT-seq", "/groups/adv2105_gp/yichen/Yi/multi/split_seq/merged_splitseq.h5ad", "h5ad",  False),
-    DS("10x_multiome", "10x Multiome", "/groups/adv2105_gp/yichen/Yi/multi/10x_multiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_filtered_feature_bc_matrix.h5", "10x_h5", True),
-    DS("SSv2_nonMy",     "SmartSeq2", "/groups/adv2105_gp/yichen/Yi/multi/smartseqv2_GSE132042_brain_non_myeloid/smartseqv2_GSE132042_brain_non_myeloid.h5ad", "h5ad", False),
-    DS("SSv2_my",        "SmartSeq2", "/groups/adv2105_gp/yichen/Yi/multi/smartseqv2_GSE132042_brain_myeloid/smartseqv2_GSE132042_brain_myeloid.h5ad", "h5ad", False),
-    DS("SeekGene",       "SeekGene",  "/groups/adv2105_gp/yichen/Yi/multi/seekgene/filtered_feature_bc_matrix.h5", "10x_h5", True),
-    DS("Microwell-seq",  "Microwell", "/groups/adv2105_gp/yichen/Yi/multi/microwell-seq/GSE153562_RAW_extracted/brain/GSM_brain_DGE.merged_by_intersection.h5ad", "h5ad", False),
-    DS("Drop-seq",       "Drop-seq",  "/groups/adv2105_gp/yichen/Yi/multi/drop_seq/GSE116470.Dropseq.brain.all_regions.raw.h5ad", "h5ad", True),
-    DS("10x v3",         "10x v3",    "/groups/adv2105_gp/yichen/Yi/multi/10xv3/10xv3.h5ad", "h5ad", True),
-    DS("10x v2",         "10x v2",    "/groups/adv2105_gp/yichen/Yi/multi/10xv2_scRNA/10xv2_scRNA.h5ad", "h5ad", True),
-    DS("10x snRNA",      "10x snRNA", "/groups/adv2105_gp/yichen/Yi/multi/10x_snRNA/filtered_gene_bc_matrices/mm10/mm10.h5ad", "h5ad", True),
+    DS("SPLiT-seq",      "SPLiT-seq", "/path/to/split_seq/merged_splitseq.h5ad", "h5ad",  False),
+    DS("10x_multiome", "10x Multiome", "/path/to/10x_multiome/filtered_feature_bc_matrix.h5", "10x_h5", True),
+    DS("SSv2_nonMy",     "SmartSeq2", "/path/to/smartseqv2_brain_non_myeloid.h5ad", "h5ad", False),
+    DS("SSv2_my",        "SmartSeq2", "/path/to/smartseqv2_brain_myeloid.h5ad", "h5ad", False),
+    DS("SeekGene",       "SeekGene",  "/path/to/seekgene/filtered_feature_bc_matrix.h5", "10x_h5", True),
+    DS("Microwell-seq",  "Microwell", "/path/to/microwell-seq/brain.h5ad", "h5ad", False),
+    DS("Drop-seq",       "Drop-seq",  "/path/to/drop-seq/brain.h5ad", "h5ad", True),
+    DS("10x v3",         "10x v3",    "/path/to/10xv3/10xv3.h5ad", "h5ad", True),
+    DS("10x v2",         "10x v2",    "/path/to/10xv2/10xv2.h5ad", "h5ad", True),
+    DS("10x snRNA",      "10x snRNA", "/path/to/10x_snRNA/mm10.h5ad", "h5ad", True),
 ]
 
 # Control the sample size (for the full set, set the upper limit very large)
@@ -1167,4 +1167,3 @@ if silh is not None:
     print(f"[Separability] best: {best_silh}  (silhouette = {silh[best_silh]:.3f})")
 print("=================================")
 display(df[df.tech=="SeekGene"].sort_values("dataset"))
-

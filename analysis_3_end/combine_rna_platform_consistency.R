@@ -29,7 +29,7 @@ env_or_default <- function(name, default) {
 base_dir <- if (length(args) >= 1) {
   args[[1]]
 } else {
-  "I:/极空间/文献插图/最终版/补充材料/snv_effect_by_cell_type"
+  "/path/to/snv_effect_by_cell_type"
 }
 
 output_dir <- if (length(args) >= 2) {

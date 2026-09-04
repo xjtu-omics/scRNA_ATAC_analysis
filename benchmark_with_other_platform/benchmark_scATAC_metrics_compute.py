@@ -5,7 +5,7 @@
 
 
 import os
-os.chdir("/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain")
+os.chdir("/path/to/scATAC/brain")
 
 
 # In[ ]:
@@ -986,7 +986,7 @@ close_all_handles(globals())
 
 
 import os
-os.chdir("/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac")
+os.chdir("/path/to/scATAC/brain/txci-atac")
 
 
 # In[6]:
@@ -1527,7 +1527,7 @@ for obj in [locals().get('adata', None), locals().get('peakA', None), locals().g
 
 
 # ===================== scATAC-seq QC (SnapATAC2) — robust all-in-one (txci-atac) =====================
-# Temp/Cache/Outputs => /groups/adv2105_gp/yichen/tmp
+# Temp/Cache/Outputs => /path/to/tmp
 # Inputs in CWD:
 #   - GSM7852211_mm10.merged.fragments.tsv.gz  (+ .tbi or .tbi.gz)
 #   - GSM7852211_mm10.counts.sparseMatrix.rows.txt.gz  (peak-like rows)
@@ -1545,8 +1545,8 @@ COUNTS_COLS = "GSM7852211_mm10.counts.sparseMatrix.cols.txt.gz"
 GENOME      = "mm10"
 
 # Force temp/cache/outputs to big scratch
-BIG_TMP   = "/groups/adv2105_gp/yichen/tmp"                 # temp + caches
-OUTDIR    = "/groups/adv2105_gp/yichen/tmp/txci_atac_qc"    # outputs
+BIG_TMP   = "/path/to/tmp"                 # temp + caches
+OUTDIR    = "/path/to/txci_atac_qc"    # outputs
 PREFIX    = "GSM7852211_scATAC"
 
 # QC thresholds
@@ -2070,14 +2070,14 @@ for obj in [locals().get('adata', None), locals().get('peakA', None), locals().g
 
 
 import os
-os.chdir("/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac")
+os.chdir("/path/to/scATAC/brain/txci-atac")
 
 
 # In[10]:
 
 
 # ===================== scATAC-seq QC (SnapATAC2) — robust all-in-one (txci-atac) =====================
-# Temp/Cache/Outputs => /groups/adv2105_gp/yichen/tmp
+# Temp/Cache/Outputs => /path/to/tmp
 # Inputs in CWD:
 #   - GSM7852211_mm10.merged.fragments.tsv.gz  (+ .tbi or .tbi.gz)
 #   - GSM7852211_mm10.counts.sparseMatrix.rows.txt.gz  (peak-like rows)
@@ -2095,8 +2095,8 @@ COUNTS_COLS = "GSM7852211_mm10.counts.sparseMatrix.cols.txt.gz"
 GENOME      = "mm10"
 
 # Force temp/cache/outputs to big scratch
-BIG_TMP   = "/groups/adv2105_gp/yichen/tmp"                 # temp + caches
-OUTDIR    = "/groups/adv2105_gp/yichen/tmp/txci_atac_qc"    # outputs
+BIG_TMP   = "/path/to/tmp"                 # temp + caches
+OUTDIR    = "/path/to/txci_atac_qc"    # outputs
 PREFIX    = "GSM7852211_scATAC"
 
 # QC thresholds
@@ -2624,10 +2624,10 @@ for obj in [locals().get('adata', None), locals().get('peakA', None), locals().g
 # Temp/cache/output directed to big scratch to avoid $HOME/TMP quota issues
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"                           # temp/cache on big disk
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"     # outputs on big disk
+BIG_TMP  = "/path/to/tmp"                           # temp/cache on big disk
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"     # outputs on big disk
 GENOME   = "mm10"                                                    # common build across datasets
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"  # your ref
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"  # your ref
 
 # Uniform QC thresholds
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -2648,11 +2648,11 @@ DOWNSAMPLE_PLOT = 10_000  # for TSSe vs log10(nFrags) panel
 
 # Your 5 datasets (mm10)
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
-    "Droplet"     : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/droplet/GSM3507342_Mouse1-Channel1.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "Droplet"     : "/path/to/scATAC/brain/droplet/GSM3507342_Mouse1-Channel1.fragments.tsv.gz",
 }
 
 # ---------- ENV ----------
@@ -2916,10 +2916,10 @@ print(summary[["dataset","frac_mito_median","frac_dup_median","doublet_score_med
 # Doublets: uses tile/bin matrix when available; otherwise skips gracefully
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"                           # temp/cache on big disk
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"     # outputs on big disk
+BIG_TMP  = "/path/to/tmp"                           # temp/cache on big disk
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"     # outputs on big disk
 GENOME   = "mm10"                                                    # common build across datasets
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"
 
 # Uniform QC thresholds
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -2940,11 +2940,11 @@ DOWNSAMPLE_PLOT = 10_000  # for TSSe vs log10(nFrags) panel
 
 # Your 5 datasets (mm10)
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
-    "Droplet"     : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/droplet/GSM3507342_Mouse1-Channel1.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "Droplet"     : "/path/to/scATAC/brain/droplet/GSM3507342_Mouse1-Channel1.fragments.tsv.gz",
 }
 
 # ---------- ENV ----------
@@ -3223,10 +3223,10 @@ print(summary[["dataset","frac_mito_median","frac_dup_median","doublet_score_med
 # NOTE: Droplet dataset removed per request.
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"                           # temp/cache on big disk
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"     # outputs on big disk
+BIG_TMP  = "/path/to/tmp"                           # temp/cache on big disk
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"     # outputs on big disk
 GENOME   = "mm10"                                                    # common build across datasets
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"
 
 # Uniform QC thresholds
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -3247,10 +3247,10 @@ DOWNSAMPLE_PLOT = 10_000  # for TSSe vs log10(nFrags) panel
 
 # Your 4 datasets (mm10) — Droplet removed
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
 }
 
 # ---------- ENV ----------
@@ -3531,10 +3531,10 @@ print(summary[["dataset","frac_mito_median","frac_dup_median","doublet_score_med
 # - Outputs: per-dataset QC table, merged PDF report, summary CSV, and scoring and ranking plots for two weight sets (Neutral / SeekGene-lean)
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"                           # large-disk TMP
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"     # output directory
+BIG_TMP  = "/path/to/tmp"                           # large-disk TMP
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"     # output directory
 GENOME   = "mm10"
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"  # local annotation
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"  # local annotation
 
 # Uniform thresholds (adjustable)
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -3555,10 +3555,10 @@ DOWNSAMPLE_PLOT = 10_000  # number of downsampled points for TSSe vs log10(nFrag
 
 # Four datasets (Droplet removed)
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
 }
 
 # ---------- ENV ----------
@@ -3940,38 +3940,10 @@ print("[INFO] Plots:",
       os.path.join(OUTDIR, "ranking_seekgene.png"))
 
 
-# In[3]:
-
-
-from IPython.display import Image, display
-display(Image(filename="/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/ranking_neutral.png"))
-
-
-# In[4]:
-
-
-from IPython.display import Image, display
-display(Image(filename="/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/ranking_seekgene.png"))
-
-
-# In[8]:
-
-
-from IPython.display import IFrame, FileLink, display
-
-pdf = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/benchmark_bars.pdf"
-
-# Click-to-download link
-display(FileLink(pdf))
-
-# Inline preview
-display(IFrame(pdf, width=1000, height=800))
-
-
 # In[5]:
 
 
-os.chdir("/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/")
+os.chdir("/path/to/benchmark_scATAC_hdf5/")
 
 
 # In[6]:
@@ -4122,18 +4094,18 @@ if "Total_seekgene" in scoring.columns:
 # Prerequisite: you have run the "Multi-tech scATAC Benchmark + Scoring" main script and produced *.qc_cells.csv and raw .h5ad under OUTDIR
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"
+BIG_TMP  = "/path/to/tmp"
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"
 GENOME   = "mm10"
 # Union peak set (strongly recommended to provide a union BED; if not, see the CLI comments below on building one with macs2+bedtools)
-UNION_PEAKS = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/union_peaks.bed"   # <- change to your path
+UNION_PEAKS = "/path/to/benchmark_scATAC_hdf5/union_peaks.bed"   # <- change to your path
 
 # Datasets (same as the main script; Droplet removed)
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
 }
 FRIP_THRESH = 0.20             # FRiP threshold (uniform-threshold filtering)
 BIN_SIZE    = 5000             # pseudobulk tile/bin size (if API available)
@@ -4398,13 +4370,6 @@ if os.path.exists(scoring_csv):
 #    Peaks with IDR<0.05 in the result are considered stably reproducible; you can compute the proportion / plot a curve.
 
 
-# In[1]:
-
-
-from IPython.display import Image, display
-display(Image(filename="/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/ranking_seekgene.updated.png"))
-
-
 # In[2]:
 
 
@@ -4415,21 +4380,21 @@ display(Image(filename="/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/rank
 # Note: this script is compatible with different SnapATAC2 API versions (make_tile_matrix/make_bin_matrix/peak_matrix may not exist)
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"                           # large-disk TMP
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"     # output directory
+BIG_TMP  = "/path/to/tmp"                           # large-disk TMP
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"     # output directory
 GENOME   = "mm10"
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"
 
 # Four datasets (Droplet removed)
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
 }
 
 # (optional) union peak set (if absent, set to ""/None; this script auto-skips FRiP & reproducibility)
-UNION_PEAKS = ""  # e.g.: "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/union_peaks.bed"
+UNION_PEAKS = ""  # e.g.: "/path/to/benchmark_scATAC_hdf5/union_peaks.bed"
 
 # Uniform thresholds (closer to the scale of your current data; can be fine-tuned later based on results)
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -4957,13 +4922,6 @@ with PdfPages(bars_pdf) as bpdf:
 print("[INFO] Barplots PDF ->", bars_pdf)
 
 
-# In[4]:
-
-
-from IPython.display import Image, display
-display(Image(filename="/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/ranking_fair.png"))
-
-
 # In[1]:
 
 
@@ -4974,21 +4932,21 @@ display(Image(filename="/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/rank
 # Note: this script is compatible with different SnapATAC2 API versions (make_tile_matrix/make_bin_matrix/peak_matrix may not exist)
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"                           # large-disk TMP
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"     # output directory
+BIG_TMP  = "/path/to/tmp"                           # large-disk TMP
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"     # output directory
 GENOME   = "mm10"
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"
 
 # Four datasets (Droplet removed)
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
 }
 
 # (optional) union peak set (if absent, set to ""/None; this script auto-skips FRiP & reproducibility)
-UNION_PEAKS = ""  # e.g.: "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/union_peaks.bed"
+UNION_PEAKS = ""  # e.g.: "/path/to/benchmark_scATAC_hdf5/union_peaks.bed"
 
 # Uniform thresholds (closer to the scale of your current data; can be fine-tuned later based on results)
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -5708,20 +5666,20 @@ make_scoring_report(tab, S, Sf, Sd, FAIR, DISPLAY, outdir=OUTDIR, palette=SCATAC
 # Note: compatible with different SnapATAC2 API versions (make_tile_matrix/make_bin_matrix/peak_matrix may not exist)
 
 # ---------- CONFIG ----------
-BIG_TMP  = "/groups/adv2105_gp/yichen/tmp"
-OUTDIR   = "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5"
+BIG_TMP  = "/path/to/tmp"
+OUTDIR   = "/path/to/benchmark_scATAC_hdf5"
 GENOME   = "mm10"
-GENE_ANNOT = "/groups/adv2105_gp/yichen/Yi/multi/refs/gencode_mouse_M31/gencode.vM31.basic.annotation.gtf.gz"
+GENE_ANNOT = "/path/to/gencode.vM31.basic.annotation.gtf.gz"
 
 DATASETS = {
-    "10x_multiome": "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
-    "10x_scatac"  : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
-    "SeekGene"    : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/seekgene/atac_fragments.tsv.gz",
-    "TXCI"        : "/groups/adv2105_gp/yichen/Yi/multi/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
+    "10x_multiome": "/path/to/scATAC/brain/10xmultiome/M_Brain_Chromium_Nuc_Isolation_vs_SaltyEZ_vs_ComplexTissueDP_atac_fragments.tsv.gz",
+    "10x_scatac"  : "/path/to/scATAC/brain/10xscatac/atac_v1_E18_brain_flash_5k_fragments.tsv.gz",
+    "SeekGene"    : "/path/to/scATAC/brain/seekgene/atac_fragments.tsv.gz",
+    "TXCI"        : "/path/to/scATAC/brain/txci-atac/GSM7852211_mm10.merged.fragments.tsv.gz",
 }
 
 # (optional) uniform peak set
-UNION_PEAKS = ""  # e.g.: "/groups/adv2105_gp/yichen/tmp/benchmark_scATAC_hdf5/union_peaks.bed"
+UNION_PEAKS = ""  # e.g.: "/path/to/benchmark_scATAC_hdf5/union_peaks.bed"
 
 # QC thresholds
 MIN_COUNTS, MAX_COUNTS = 1000, 200000
@@ -6336,7 +6294,6 @@ make_scoring_report(tab, S, Sf, Sd, FAIR, DISPLAY, outdir=OUTDIR, palette=SCATAC
 
 
 # In[ ]:
-
 
 
 
